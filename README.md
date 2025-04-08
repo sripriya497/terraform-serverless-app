@@ -16,10 +16,19 @@ This is a mid-level Infrastructure-as-Code (IaC) project built with **Terraform*
 ---
 
 ## 📁 Project Structure
-
-terraform-serverless-app/ ├── main.tf # Root configuration ├── variables.tf # Root input variables ├── outputs.tf # Root outputs ├── .gitignore ├── README.md └── modules/ └── s3-static-website/ ├── main.tf # Module logic for S3 + CloudFront ├── variables.tf # Module input variables └── outputs.tf # Module outputs
-
-
+```
+terraform-serverless-app/
+├── main.tf                  # Root configuration
+├── variables.tf             # Root input variables
+├── outputs.tf               # Root outputs
+├── .gitignore
+├── README.md
+└── modules/
+    └── s3-static-website/
+        ├── main.tf          # Module logic for S3 + CloudFront
+        ├── variables.tf     # Module input variables
+        └── outputs.tf       # Module outputs
+```
 
 ---
 
@@ -36,20 +45,30 @@ terraform-serverless-app/ ├── main.tf # Root configuration ├── varia
 
 ## 🚀 Getting Started
 
-### 1. Clone the repository
+**Clone the repository**
 ```bash
 git clone https://github.com/YOUR_USERNAME/terraform-serverless-app.git
 cd terraform-serverless-app
+```
 
-Initialize Terraform
+**Initialize Terraform**
+```bash
 terraform init
+```
+**Plan the infrastructure**
+```bash
 terraform plan
+```
+**Apply the changes**
+```bash
 terraform apply
+```
 
-Notes
-Make sure you have AWS CLI configured with credentials.
+**Notes**
 
-All infrastructure is designed to use free-tier eligible AWS services.
+- Make sure you have AWS CLI configured with credentials.
 
-Terraform state is stored locally (can be moved to remote backend in later phases).
+- All infrastructure is designed to use free-tier eligible AWS services.
+
+- Terraform state is stored locally (can be moved to remote backend in later phases).
 
